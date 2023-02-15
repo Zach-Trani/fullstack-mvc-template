@@ -22,4 +22,4 @@ const itemListSchema = new mongoose.Schema({
 })
 
 // export schema to use elsewhere in the app - packages up the blueprint: model name, our schema, our collection (which is created in the DB)
-module.exports = mongoose.model('ItemList', itemListSchema, 'items');
+module.exports = mongoose.model('itemlist', itemListSchema, 'items');
