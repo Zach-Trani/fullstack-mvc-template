@@ -1,4 +1,4 @@
-const ItemList = require('../models/ItemList') // can now reference the schema
+const ItemList = require('../models/itemlist') // can now reference the schema
 
 // two methods: one to get homepage, and two to create item
 
