@@ -1,0 +1,5 @@
+.env    
+node_modules
+
+# env is secret
+# modules are massive files
