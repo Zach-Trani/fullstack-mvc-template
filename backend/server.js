@@ -3,6 +3,7 @@ const express = require("express");
 const app = express(); // easier way to reference
 const PORT = 9000;
 const mongoose = require("mongoose"); // helps talk to the DB easier
+const cors = require('cors')
 
 //*Import functions/routes
 const connectDB = require("./config/database")
@@ -14,6 +15,7 @@ require('dotenv').config({path: './config/.env'})
 //todo - Connect to Database
 connectDB()
 
+app.use(cors())
 //todo - Set Middleware
 app.set("view engine", "ejs"); // ejs is a templating engine - dynamically fetch DB info
 app.use(express.static('public')) // tells express to look in public folder for static files (css)

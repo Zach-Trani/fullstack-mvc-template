@@ -5,9 +5,10 @@ const ItemList = require('../models/itemlist') // can now reference the schema
 // when talking to DB need to use async/await functions
 module.exports = {
     getIndex: async (req, res) => {
+        console.log("I made it")
         try {
-            const items = await ItemList.find() // go into the DB-->collection and bring out all data into this new variable: items
-            res.render("index.ejs", { itemList: items }); // render the homepage & send the list of items as an object over to ejs to list them out
+    // go into the DB-->collection and bring out all data into this new variable: items
+            res.json({ itemList: await ItemList.find() }); // render the homepage & send the list of items as an object over to ejs to list them out
         } catch (err) {
             if (err) return res.status(500).send(err); // sends the line of the error
         }
